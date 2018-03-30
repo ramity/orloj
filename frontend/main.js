@@ -16,7 +16,6 @@ var mainWindow = null;
 
 app.on("ready", function () {
   mainWindow = new BrowserWindow({
-    frame: false,
     show: false,
     webPreferences: {
       nodeIntegration: true,
@@ -49,7 +48,7 @@ app.on("ready", function () {
 
   mainWindow.onbeforeunload = (e) => {
     // Prevent Command-R from unloading the window contents.
-    e.returnValue = false;
+    // e.returnValue = false;
   }
 
   mainWindow.on("closed", function () {
